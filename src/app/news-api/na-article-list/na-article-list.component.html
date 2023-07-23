@@ -1,0 +1,5 @@
+<h3>World news</h3>
+<div class="list-group"><a *ngFor="let article of articles;" class="list-group-item list-group-item-action"
+    [href]="article.url" target="_blank">{{article.title | naArtileList: article.source.name}}</a></div>
+
+<app-paginator [noOfPages]="noOfPages" (pageClicked)="handlePageClick($event)"></app-paginator>
