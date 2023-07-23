@@ -1,0 +1,4 @@
+<div *ngFor="let msg of notif$ | async" class="alert alert-{{msg?.type === 'error' ? 'danger' : msg.type}}">
+  {{msg.text}}
+  <button class="btn btn-close" (click)="onClose(msg.id)"></button>
+</div>
